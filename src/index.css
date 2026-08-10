@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, sans-serif;
+  background-color: #f8fafc;
+}
+
+@keyframes pulseLine {
+  0% { stroke-dashoffset: 240; }
+  100% { stroke-dashoffset: 0; }
+}
+.pulse-path { stroke-dasharray: 240; animation: pulseLine 2.6s linear infinite; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp .25s ease-out; }
+
+* { scrollbar-width: thin; }
